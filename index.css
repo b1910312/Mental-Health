@@ -1,0 +1,61 @@
+.navbar {
+    background-color: rgba(14, 7, 112, 1);
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    color: rgb(0, 255, 191);
+}
+
+.banner {
+    background: linear-gradient(rgba(14, 7, 112, 0.7), rgba(14, 7, 112, 1));
+    color: white
+}
+
+.bannercolortext {
+    background: linear-gradient(45deg, #4cdd97, #8456f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.bannerbtn{
+    background: linear-gradient(25deg,rgba(109, 240, 157, 0.999), rgb(9, 255, 189));
+    color: white
+}
+.bannerbtn:hover{
+    color: white;
+    background: linear-gradient(25deg,rgba(9, 255, 189, 1), rgb(109, 240, 189));
+
+}
+
+@media only screen and (max-width: 600px) {}
+
+/* Quy tắc CSS cho màn hình trung bình */
+@media only screen and (min-width: 601px) and (max-width: 1120px) {
+    .banner {
+        padding: 70px;
+    }
+    .bannertext{
+        margin-top: 80px;
+    }
+    .bannerimg{
+        margin-top: 30px;
+        width: 60vw;
+    }
+}
+
+/* Quy tắc CSS cho màn hình lớn */
+@media only screen and (min-width: 1120px) {
+    .banner {
+        padding: 70px;
+    }
+    .bannertext{
+        margin-top: 80px;
+    }
+    .bannerimg{
+        width: 30vw;
+    }
+
+}
