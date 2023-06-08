@@ -1,3 +1,4 @@
+
 .navbar {
     background-color: rgba(14, 7, 112, 1);
 }
@@ -16,7 +17,7 @@
 }
 
 .bannercolortext {
-    background: linear-gradient(45deg, #4cdd97, #8456f7);
+    background: linear-gradient(45deg, #4cdd97, #00e6fb);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -30,12 +31,31 @@
 
 }
 
-@media only screen and (max-width: 600px) {}
+
+@media only screen and (max-width: 500px) {
+    .banner {
+        padding: 70px;
+    }
+    .bannertext{
+        margin-top: 50px;
+    }
+    .bannerimg{
+        margin-top: 20px;
+        width: 300vw;
+    }
+    .bannerbtn{
+        width: 500px;
+    }
+    .headercontent{
+        margin-left: 70px;
+        margin-top: 50px;
+    }
+}
 
 /* Quy tắc CSS cho màn hình trung bình */
 @media only screen and (min-width: 601px) and (max-width: 1120px) {
     .banner {
-        padding: 70px;
+        padding-top: 70px;
     }
     .bannertext{
         margin-top: 80px;
