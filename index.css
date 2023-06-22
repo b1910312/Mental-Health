@@ -1,4 +1,7 @@
 
+body{
+    width: 100%;
+}
 .navbar {
     background-color: rgba(14, 7, 112, 1);
 }
@@ -73,6 +76,7 @@ ul.pagination li a.activebtn {
 
 .navbar {
     color: Red;
+    width: 100%;
 }
 
 
