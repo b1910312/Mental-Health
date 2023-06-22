@@ -1,3 +1,6 @@
+body {
+    overflow-x: hidden;
+}
 
 .navbar {
     background-color: rgba(14, 7, 112, 1);
@@ -21,65 +24,189 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.bannerbtn{
-    background: linear-gradient(25deg,rgba(109, 240, 157, 0.999), rgb(9, 255, 189));
+
+.bannerbtn {
+    background: linear-gradient(25deg, rgba(109, 240, 157, 0.999), rgb(9, 255, 189));
     color: white
 }
-.bannerbtn:hover{
+
+.bannerbtn:hover {
     color: white;
-    background: linear-gradient(25deg,rgba(9, 255, 189, 1), rgb(109, 240, 189));
+    background: linear-gradient(25deg, rgba(9, 255, 189, 1), rgb(109, 240, 189));
 
 }
 
+.imgframe {
+    position: relative;
+}
 
-@media only screen and (max-width: 500px) {
+
+ul.pagination {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+ul.pagination li {
+    margin: 10px 10px;
+}
+
+ul.pagination li a {
+    display: block;
+    padding: 8px 16px;
+    background-color: rgba(14, 7, 112, 0);
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    font-size: x-large;
+    
+}
+
+ul.pagination li a:hover {
+    background-color: rgba(14, 7, 112, 0);
+}
+
+ul.pagination li a.activebtn {
+    background: linear-gradient(45deg, #4cdd97, #00e6fb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.navbar {
+    color: Red;
+}
+
+
+
+@media only screen and (max-width: 767px) {
     .banner {
         padding-top: 100px;
         padding-bottom: 20px;
         text-align: center;
     }
-    .bannertext{
+
+    .bannertext {
         margin-top: 50px;
     }
-    .bannerimg{
+
+    .bannerimg {
         margin-top: 20px;
         width: 300vw;
     }
-    .bannerbtn{
+
+    .bannerbtn {
         width: 500px;
     }
-    .headercontent{
+
+    .headercontent {
         margin-left: 70px;
         margin-top: 50px;
+    }
+
+    .imgframeslide {
+        position: absolute;
+        width: 100%;
+        height: auto;
+    }
+
+    .slide {
+        background-color: #00e6fb;
+        position: absolute;
+        z-index: -1;
+        margin-left: 37%;
+        margin-top: 11%;
+        border-radius: 10%;
+        width: 26%;
+        height: 49.3vw;
+    }
+    ul.pagination li a {
+        font-size: 15px;
+        padding: 1px 1px;
+        text-align: start;
+        margin-left: 15vw;
     }
 }
 
 /* Quy tắc CSS cho màn hình trung bình */
-@media only screen and (min-width: 601px) and (max-width: 1120px) {
+@media only screen and (min-width: 768px  ) and (max-width: 991px) {
     .banner {
         padding-top: 90px;
         padding-bottom: 20px;
+        text-align: center;
     }
-    .bannertext{
+
+    .bannertext {
         margin-top: 80px;
     }
-    .bannerimg{
+
+    .bannerimg {
         margin-top: 30px;
         width: 60vw;
+    }
+
+    .imgframeslide {
+        position: absolute;
+        width: 100%;
+        height: auto;
+    }
+
+    .slide {
+        background-color: #00e6fb;
+        position: absolute;
+        z-index: -1;
+        margin-left: 37%;
+        margin-top: 11%;
+        border-radius: 10%;
+        width: 26%;
+        height: 24.1vw;
+    }
+
+    .paginationframe {
+        margin-top: 00px;
+    }
+    ul.pagination li a {
+        padding: 1px 1px;
     }
 }
 
 /* Quy tắc CSS cho màn hình lớn */
-@media only screen and (min-width: 1120px) {
+@media only screen and (min-width: 992px ) {
     .banner {
         padding-top: 120px;
         padding-bottom: 20px;
     }
-    .bannertext{
+
+    .bannertext {
         margin-top: 80px;
     }
-    .bannerimg{
+
+    .bannerimg {
         width: 30vw;
     }
+
+    .imgframeslide {
+        position: absolute;
+        width: 100%;
+        height: auto;
+    }
+
+    .slide {
+        background-color: #00e6fb;
+        position: absolute;
+        z-index: -1;
+
+        margin-left: 37%;
+        margin-top: 11%;
+        border-radius: 10%;
+        width: 26%;
+        height: 24.1vw;
+    }
+
+    .paginationframe {
+        margin-top: 200px;
+    }
+
 
 }
