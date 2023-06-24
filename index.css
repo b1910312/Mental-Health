@@ -1,4 +1,6 @@
-
+body{
+    background-color: white;
+}
 .navbar {
     background-color: rgba(14, 7, 112, 1);
 }
