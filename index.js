@@ -119,7 +119,7 @@ $(document).ready(function () {
     var output1 = $("#demo1");
     var output2 = $("#demo3");
 
-    
+
     // Cập nhật giá trị thanh trượt hiện tại (mỗi khi bạn kéo tay cầm thanh trượt)
     slider.on("input", function () {
         output1.val($(this).val());
@@ -134,12 +134,23 @@ $(document).ready(function () {
     output.on("input", function () {
         slider1.val($(this).val());
     });
-    
+
     output1.on("input", function () {
         slider.val($(this).val());
     });
     output2.on("input", function () {
         slider2.val($(this).val());
+    });
+    // Xử lý sự kiện cuộn trang để thay đổi CSS cho navbar
+    $(window).scroll(function () {
+        var scrollTop = $(this).scrollTop();
+        var navbar = $('.navbar');
+
+        if (scrollTop > 0) {
+            navbar.addClass('scrolled');
+        } else {
+            navbar.removeClass('scrolled');
+        }
     });
 
 });
