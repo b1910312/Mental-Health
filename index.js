@@ -5,27 +5,27 @@ $(document).ready(function () {
     html += '       <img src="Asset 5@2x.png" class="img-fluid bannerimg" alt="">';
     html += '</div>';
     html += '<div class="bannertext col-12">';
-    html += '               <h1>Someone</h1>';
-    html += '    <h1 class="bannercolortext">will write something</h1>';
-    html += '    <h1>HERE!</h1>';
-    html += '    <p>and in here will be a content. example contact of us</p>';
-    html += '    <a href="#" class="btn bannerbtn w-75">Let\'s go</a>';
+    html += '               <h1>imMe.pro</h1>';
+    html += '    <h1 class="bannercolortext">Người bạn đồng hành</h1>';
+    html += '    <h1>của mỗi chúng ta</h1>';
+    html += '    <p>imMe.pro là nển tảng cung cấp công cụ giúp bạn chăm sóc sức khỏe tinh thần cho mỗi chúng ta khi chúng ta cần</p>';
+    html += '    <a href="#" class="btn bannerbtn w-75">Bắt đầu thôi!!!</a>';
     html += '</div>';
 
     var html1 = '';
     html1 += '<div class="col-lg-1"></div>'
     html1 += '<div class="bannertext col-lg-5 col-md-5">';
-    html1 += '               <h1>Someone</h1>';
-    html1 += '    <h1 class="bannercolortext">will write something</h1>';
-    html1 += '    <h1>HERE!</h1>';
-    html1 += '    <p>and in here will be a content. example contact of us</p>';
-    html1 += '    <a href="#" class="btn bannerbtn w-75">Let\'s go</a>';
+    html1 += '               <h1>imMe.pro</h1>';
+    html1 += '    <h1 class="bannercolortext">Người bạn đồng hành</h1>';
+    html1 += '    <h1>của mỗi chúng ta</h1>';
+    html1 += '    <p>imMe.pro là nển tảng cung cấp công cụ giúp bạn chăm sóc sức khỏe tinh thần cho mỗi chúng ta khi chúng ta cần</p>';
+    html1 += '    <a href="#" class="btn bannerbtn w-75">Bắt đầu thôi!!!</a>';
     html1 += '</div>';
     html1 += ' <div class="col-lg-6 col-md-7 mb-auto mt-auto">';
     html1 += '       <img src="Asset 5@2x.png" class="img-fluid bannerimg" alt="">';
     html1 += '</div>';
     $(window).resize(function () {
-        if ($(window).width() < 752) {
+        if ($(window).width() <= 767) {
             // Thêm đoạn mã HTML tại đây
             $('#banner').empty();
             $('#banner').append(html);
@@ -109,17 +109,33 @@ $(document).ready(function () {
     }, 3000);
     //thanh cuộn slidebar 
     var slider = $("#myRange");
-    var output = $("#demo");
+    var slider1 = $("#myRange1");
+    var slider2 = $("#myRange2");
+    var output = $("#demo2");
     var output1 = $("#demo1");
+    var output2 = $("#demo3");
 
-
-    // Hiển thị giá trị thanh trượt mặc định
-    output.text(slider.val());
-
+    
     // Cập nhật giá trị thanh trượt hiện tại (mỗi khi bạn kéo tay cầm thanh trượt)
     slider.on("input", function () {
-        output.text($(this).val());
         output1.val($(this).val());
+    });
+    slider1.on("input", function () {
+        output.val($(this).val());
+    });
+    slider2.on("input", function () {
+        output2.val($(this).val());
+    });
+
+    output.on("input", function () {
+        slider1.val($(this).val());
+    });
+    
+    output1.on("input", function () {
+        slider.val($(this).val());
+    });
+    output2.on("input", function () {
+        slider2.val($(this).val());
     });
 
 });
