@@ -71,9 +71,13 @@ $(document).ready(function () {
         if (id == 'tab1') {
             $('#tab1').addClass('navtabbuttonactive');
             $('#tab2').removeClass('navtabbuttonactive');
+            $('#navtabbg1').addClass('navtabbgactive');
+            $('#navtabbg2').removeClass('navtabbgactive');
         } else {
             $('#tab2').addClass('navtabbuttonactive');
             $('#tab1').removeClass('navtabbuttonactive');
+            $('#navtabbg2').addClass('navtabbgactive');
+            $('#navtabbg1').removeClass('navtabbgactive');
         }
 
     }
