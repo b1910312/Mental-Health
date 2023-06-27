@@ -1,41 +1,32 @@
 $(document).ready(function () {
-    //banner 
-    var html = '';
-    html += ' <div class="col-12 mb-auto mt-auto">';
-    html += '       <img src="Asset 5@2x.png" class="img-fluid bannerimg" alt="">';
-    html += '</div>';
-    html += '<div class="bannertext col-12">';
-    html += '               <h1>imMe.pro</h1>';
-    html += '    <h1 class="bannercolortext">Người bạn đồng hành</h1>';
-    html += '    <h1>của mỗi chúng ta</h1>';
-    html += '    <p>imMe.pro là nển tảng cung cấp công cụ giúp bạn chăm sóc sức khỏe tinh thần cho mỗi chúng ta khi chúng ta cần</p>';
-    html += '    <a href="#" class="btn bannerbtn w-75">Bắt đầu thôi!!!</a>';
-    html += '</div>';
+    // Kiểm tra kích thước màn hình và ẩn/hiển thị nút toggle khi tải trang và khi thay đổi kích thước màn hình
+    function toggleButtonVisibility() {
+        var md = $("#md");
+        var sm = $("#sm");
+        if ($(window).width() <= 911 && $(window).width() > 700) {
+            $('.mdmt').show();
+            $('.mdmtelse').hide();
 
-    var html1 = '';
-    html1 += '<div class="col-lg-1"></div>'
-    html1 += '<div class="bannertext col-lg-5 col-md-5">';
-    html1 += '               <h1>imMe.pro</h1>';
-    html1 += '    <h1 class="bannercolortext">Người bạn đồng hành</h1>';
-    html1 += '    <h1>của mỗi chúng ta</h1>';
-    html1 += '    <p>imMe.pro là nển tảng cung cấp công cụ giúp bạn chăm sóc sức khỏe tinh thần cho mỗi chúng ta khi chúng ta cần</p>';
-    html1 += '    <a href="#" class="btn bannerbtn w-75">Bắt đầu thôi!!!</a>';
-    html1 += '</div>';
-    html1 += ' <div class="col-lg-6 col-md-7 mb-auto mt-auto">';
-    html1 += '       <img src="Asset 5@2x.png" class="img-fluid bannerimg" alt="">';
-    html1 += '</div>';
-    $(window).resize(function () {
-        if ($(window).width() <= 767) {
-            // Thêm đoạn mã HTML tại đây
-            $('#banner').empty();
-            $('#banner').append(html);
         }
         else {
-
-            $('#banner').empty();
-            $('#banner').append(html1);
+            $('.mdmt').hide();
+            $('.mdmtelse').show();
         }
-    });
+        if ($(window).width() <= 700) {
+            $('.md').hide();
+            $('.sm').show();
+            md.hide();
+            sm.show(); // Hiển thị nút toggle
+        } else {
+            $('.sm').hide();
+            $('.md').show();
+            sm.hide();
+            md.show(); // Ẩn nút toggle
+        }
+    }
+
+    // Gọi hàm khi tải trang và khi thay đổi kích thước màn hình
+    $(window).on("load resize", toggleButtonVisibility);
 
 
     //thay đổi slide
