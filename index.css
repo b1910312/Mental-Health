@@ -3,8 +3,18 @@ body {
     font-family: 'Oswald', sans-serif;
 
 }
-
-
+@font-face {
+    font-family: Pacifico;
+    src: url('Pacifico-Regular.ttf') ;
+}
+@font-face {
+    font-family: Oswald ;
+    src: url('Oswald-Regular.ttf');
+}
+@font-face {
+    font-family: Rowdies;
+    src: url('Rowdies-Regular.ttf') ;
+}
 .navbar {
     background-color: rgba(14, 7, 112, 1);
     position: fixed;
@@ -58,6 +68,9 @@ body {
 
 }
 
+.bgpage{
+    background: linear-gradient(30deg, #0827949a, #0015ffcf);
+}
 .imgframe {
     position: relative;
 }
@@ -79,11 +92,16 @@ body {
 .navtabbgactive {}
 
 .subtabbutton {
-    color: rgb(124, 115, 241);
+    color: rgb(0, 68, 255);
+    background-color: white;
+}
+.subtabbutton:hover {
+    color: rgb(255, 0, 225);
 }
 
 .subtabbuttonactive {
-    color: #00e6fb;
+    color: white;
+    background-color: rgba(132, 0, 248, 0.926);
 }
 
 .navtabrow {
@@ -168,7 +186,17 @@ ul.pagination li a.activebtn {
     background: #4CAF50;
     cursor: pointer;
 }
-
+label{
+    font-size: larger;
+    background: linear-gradient(0, #00ff84, #00e6fb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.bgtext{
+    background: linear-gradient(0, #00ff84, #00e6fb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 .slider::-moz-range-thumb {
     width: 25px;
     height: 25px;
@@ -363,7 +391,7 @@ ul.pagination li a.activebtn {
     }
 
     .imgframe {
-        height: 39vw;
+        height: 36vw;
     }
 
     .mten {
@@ -377,5 +405,8 @@ ul.pagination li a.activebtn {
     .footercontact {
 
         font-size: 22px;
+    }
+    .pdn{
+        padding-left: 100px;
     }
 }
